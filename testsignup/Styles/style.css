@@ -155,7 +155,7 @@ form {
 }
 
 .bio-banner {
-  background-image: url(/Images/onetcoverpage.jpg);
+  background-image: url("/Images/onetcoverpage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
