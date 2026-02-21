@@ -337,7 +337,7 @@ form {
   border: 1px solid rgb(0, 255, 157);
   border-top: none;
   border-radius: 0px 0px 10px 10px;
-  max-height: 380px;
+  max-height: 420px;
   overflow-y: auto;
 }
 
@@ -409,7 +409,7 @@ form {
     font-weight: bold;
     position: fixed;
     transform: translate(-50%, -50%);
-    top: 445px;
+    top: 450px;
     left: 50%;
     width: 96%;
   }
