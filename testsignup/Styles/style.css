@@ -194,7 +194,7 @@ form {
   line-height: 20px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: clamp(12px, 1vh, 100px);
-  font-weight: 300px;
+  font-weight: 300;
   border: 0.5px solid #000;
   background: rgba(27, 27, 27, 0.3);
   backdrop-filter: blur(10px);
@@ -217,7 +217,7 @@ form {
   font-weight: bold;
   position: fixed;
   transform: translate(-50%, -50%);
-  top: 440px;
+  top: 430px;
   left: 50%;
   width: 96%;
 }
@@ -288,7 +288,7 @@ form {
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(12px, 1vh, 100px);
-  font-weight: 200;
+  font-weight: 300;
   width: 100%;
   margin: 0px;
   padding: 5px 2px;
@@ -337,7 +337,7 @@ form {
   border: 1px solid rgb(0, 255, 157);
   border-top: none;
   border-radius: 0px 0px 10px 10px;
-  max-height: 280px;
+  max-height: 350px;
   overflow-y: auto;
 }
 
@@ -409,7 +409,7 @@ form {
     font-weight: bold;
     position: fixed;
     transform: translate(-50%, -50%);
-    top: 450px;
+    top: 445px;
     left: 50%;
     width: 96%;
   }
