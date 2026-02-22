@@ -68,7 +68,15 @@ form {
   flex-direction: column;
 }
 
-.input {
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(14px, 1vh, 100px);
+  font-weight: 600;
+  margin: 0px;
+  padding: 5px 5px;
+}
+
+.input-field {
   width: 100%;
   min-width: 250px;
   margin: 0px;
@@ -89,6 +97,12 @@ form {
 .submit-btn:hover {
   background: #29fa56;
   color: #000;
+  /* border: 1px solid #000; */
+}
+
+.submit-btn:active {
+  background: #1100ff;
+  color: #fff;
   /* border: 1px solid #000; */
 }
 
@@ -135,8 +149,8 @@ form {
   inset: 0;
   z-index: 0;
   border-radius: 0px 0px 10px 10px;
-  /* transform: translateY(-250%); */
-  transition: 3s;
+  transform: translateY(0);
+  transition: transform 0.6s ease-out;
   /* opacity: 1; */
   gap: 2px;
 }
@@ -186,7 +200,8 @@ form {
 .profile-pix img {
   width: 75px;
   height: 75px;
-  border: 3px solid #00ff6a;
+  /* border: 2px solid #00ff6a; */
+  border: 2px solid #1100ff;
   border-radius: 50%;
   page-break-inside: 0px;
   padding: 1px;
@@ -199,14 +214,48 @@ form {
   font-size: clamp(12px, 1vh, 100px);
   font-weight: 300;
   border: 0.5px solid #000;
-  background: rgba(27, 27, 27, 0.3);
-  backdrop-filter: blur(10px);
+  background: #1b1b1b;
+  /* backdrop-filter: blur(10px); */
   z-index: -1;
   color: #c9c9c9;
   border-top: none;
-  padding: 28px 10px 5px;
+  padding: 40px 10px 5px;
   border-radius: 0px 0px 10px 10px;
   width: 100%;
+  position: relative;
+}
+
+.cta-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 160px;
+  position: absolute;
+  right: -65px;
+  top: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.cta-button {
+  background: none;
+  /* color: #c9c9c9; */
+  color: #fff;
+  margin: 0px;
+  padding: 4px 20px;
+  border: 0.2px solid #494949;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
+}
+
+#signin-button {
+  background: #1100ff;
+}
+
+.cta-button:hover {
+  background: #fff !important;
+  color: #1b1b1b;
+  border: 0.2px solid #000;
 }
 
 .table {
@@ -433,7 +482,7 @@ form {
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-    height: auto;
+    height: 100%;
     border-radius: 10px 0px 0px 10px;
     margin: 0px;
     padding: 10px 15px;
