@@ -36,8 +36,8 @@ let isAnimating = false;
 previewBtn.addEventListener("click", () => {
   if (isAnimating) return;
 
-  previewUsername.innerHTML = username.textContent;
-  previewEmail.innerHTML = email.textContent;
+  previewUsername.textContent = username.textContent;
+  previewEmail.textContent = email.textContent;
 
   isAnimating = true;
 
