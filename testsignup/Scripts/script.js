@@ -31,11 +31,22 @@ signupButton.addEventListener("click", (e) => {
 });
 
 let isPreview = true;
-let isMyCourse = true;
+let isAnimating = false;
+
 previewBtn.addEventListener("click", () => {
+  if (isAnimating) return;
+
   previewUsername.innerHTML = username.textContent;
   previewEmail.innerHTML = email.textContent;
+
+  isAnimating = true;
+
   detailBox.style.display = "flex";
+
+  setTimeout(() => {
+    detailBox.style.opacity = "1";
+    detailBox.style.transform = "translateY(0)";
+  }, 50);
 
   if (isPreview) {
     console.log("Condition Passed.");
@@ -48,23 +59,25 @@ previewBtn.addEventListener("click", () => {
       previewBtn.textContent = "My Courses";
 
       isPreview = false;
-      isMyCourse = false;
+      isAnimating = false;
     }, 3000);
   } else {
     previewBtn.textContent = "Preview";
     isPreview = true;
-  }
-  if (!isMyCourse) {
+
     setTimeout(() => {
       detailBox.style.display = "none";
       bgDrop.style.display = "block";
       bgDrop.style.transform = "translateY(0)";
       signTitle.style.display = "none";
+
+      detailBox.style.opacity = "0";
+      detailBox.style.transform = "translateY(-20)";
+
       detailGroup.style.background =
         "linear-gradient(-160deg, #cf18fd, #00ff6a, #1100ff)";
 
-      isMyCourse = true;
+      isAnimating = false;
     }, 5000);
-    return;
   }
 });
