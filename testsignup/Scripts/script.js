@@ -1,10 +1,15 @@
 const checkBox = document.getElementById("checked");
-const password = document.getElementById("password");
 const bgDrop = document.getElementById("bg-drop");
 const previewBtn = document.getElementById("preview-btn");
 const signupButton = document.getElementById("signin-button");
+const detailGroup = document.getElementById("detail-group");
 const detailBox = document.getElementById("detail-box");
 const signTitle = document.getElementById("sign-title");
+const previewUsername = document.getElementById("preview-username");
+const previewEmail = document.getElementById("preview-email");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 
 checkBox.addEventListener("change", () => {
   if (checkBox.checked) {
@@ -25,22 +30,41 @@ signupButton.addEventListener("click", (e) => {
   }, 600); // match CSS transition time
 });
 
-previewBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  detailBox.style.visibility = "visible";
+let isPreview = true;
+let isMyCourse = true;
+previewBtn.addEventListener("click", () => {
+  previewUsername.innerHTML = username.textContent;
+  previewEmail.innerHTML = email.textContent;
+  detailBox.style.display = "flex";
 
-  if ((previewBtn.textContent = "Preview")) {
+  if (isPreview) {
+    console.log("Condition Passed.");
+
     setTimeout(() => {
-      previewBtn.textContent = "Reiew Courses";
-    }, 5000);
-    return;
+      console.log("Timeout Executed");
+
+      detailGroup.style.background =
+        "linear-gradient(-160deg, #cf18fd, #ffffff, #05013b)";
+      previewBtn.textContent = "My Courses";
+
+      isPreview = false;
+      isMyCourse = false;
+    }, 3000);
+  } else {
+    previewBtn.textContent = "Preview";
+    isPreview = true;
   }
-
-  if ((previewBtn.textContent = "Reiew Courses")) {
+  if (!isMyCourse) {
     setTimeout(() => {
+      detailBox.style.display = "none";
       bgDrop.style.display = "block";
       bgDrop.style.transform = "translateY(0)";
       signTitle.style.display = "none";
-    }, 3000);
+      detailGroup.style.background =
+        "linear-gradient(-160deg, #cf18fd, #00ff6a, #1100ff)";
+
+      isMyCourse = true;
+    }, 5000);
+    return;
   }
 });
