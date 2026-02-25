@@ -218,7 +218,7 @@ form {
 
 .user-detail h3 {
   margin: 0px;
-  padding: 3px 15px;
+  padding: 4px 15px;
   background: rgba(253, 243, 175, 0.808);
   border: 0.2px solid #f3b631;
   border-radius: 8px;
@@ -232,7 +232,7 @@ form {
 
 .user-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   justify-content: space-between;
   align-items: center;
   margin: 0px;
@@ -242,10 +242,11 @@ form {
 }
 
 .unitdetail {
-  display: block;
-  color: #fff !important;
-  /* min-width: 120px; */
-  /* justify-self: end; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(14px, 1.5vh, 100px);
+  font-weight: 200;
+  color: #c4c4c4;
+  text-align: right;
 }
 
 .user-footer {
