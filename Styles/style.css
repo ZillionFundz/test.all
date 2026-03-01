@@ -42,7 +42,7 @@ body {
   margin: 0px;
   padding: 10px;
   background: #000;
-  position: relative;
+  position: fixed;
   height: 100%;
   width: 100%;
   max-width: 550px;
