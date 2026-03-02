@@ -36,7 +36,7 @@ body {
   align-items: center;
   margin: 0px;
   padding: 0px;
-  background: #c9c9c9;
+  background: #6e3e3e;
   width: 100%;
   max-width: 580px;
   height: 100vh;
@@ -678,12 +678,12 @@ body {
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
   margin: 0px;
-  padding: 5px 5px 10px;
+  padding: 5px 5px 5px;
   border: 1px solid rgb(0, 255, 157);
   border-top: none;
   border-radius: 0px 0px 10px 10px;
   /* height: auto; */
-  max-height: 475px;
+  max-height: 473px;
   overflow-y: auto;
 }
 
