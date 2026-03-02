@@ -40,12 +40,13 @@ body {
 
 .sign-form {
   margin: 0px;
-  padding: 10px;
+  padding: 5px;
   background: #000;
   position: fixed;
   height: 100%;
   width: 100%;
   max-width: 550px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .signin-group-box {
@@ -53,33 +54,35 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 #signup-form {
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 #signin-form {
   display: flex;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .sign-up-in-title {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(20px, 2vh, 100px);
   font-weight: 600;
   /* color: #1100ff; */
   letter-spacing: 1px;
 }
 
-.signup-title {
-  display: none;
+#signup-title {
   position: absolute;
-  left: 75px;
-  top: 55px;
+  top: 40px;
+  left: 60px;
   transform: translate(-50%, -50%);
-  z-index: 1;
-  color: #000;
+  color: #1100ff;
+  position: absolute;
 }
 
 #signin-title {
@@ -123,6 +126,7 @@ body {
   padding: 10px 15px;
   gap: 15px;
   background: #fff;
+  position: relative;
   /* box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.3); */
 }
 
@@ -151,7 +155,13 @@ body {
   top: 30px;
   left: 25px;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.exit-button:hover {
+  color: #c9c9c9;
+  background: #464545;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.4);
 }
 
 .sigin-header-box {
@@ -241,7 +251,7 @@ body {
 
 #signin-button {
   min-width: 100%;
-  padding: 15px 20px;
+  padding: 12px 20px;
   background: #4e01b3;
   border-radius: 15px;
 }
@@ -389,6 +399,8 @@ body {
   font-weight: 200;
   letter-spacing: 1px;
   color: #fff;
+  margin: 0px;
+  padding: 4px 4px;
 }
 
 .bg-drop {
@@ -747,11 +759,13 @@ body {
 
   .sign-form {
     margin: 0px;
-    padding: 10px;
-    border-radius: 0px 0px 10px 10px;
+    padding: 5px;
     /* background: #000; */
-    height: 100%;
     position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    border-radius: 0px 0px 0px 0px;
     top: 0px;
   }
 
