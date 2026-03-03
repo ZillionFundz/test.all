@@ -103,6 +103,18 @@ body {
   letter-spacing: 0px;
 }
 
+.signin-title-and-forgot-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 10px;
+  width: 100%;
+  height: 25%;
+  /* gap: 5px; */
+}
+
 .signin-header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(14px, 2vh, 100px);
@@ -194,14 +206,20 @@ body {
   flex-direction: column;
   margin: 0px;
   padding: 2px 4px 2px;
-  border: 1px solid #4e01b3;
+  border: 0.2px solid #adadad;
+  /* border: 1px solid #4e01b3; */
   border-radius: 8px;
-  width: 100%;
+  width: 75vw;
+}
+
+.signin-wrapper:hover {
+  border: 1px solid #4e01b3;
+  box-shadow: 0 0 4px 2px rgba(41, 250, 86, 0.5);
 }
 
 .input-label {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(12px, 1vh, 100px);
+  font-size: clamp(14px, 1vh, 100px);
   font-weight: 400;
   color: #8d8d8d;
   margin: 0px;
@@ -211,7 +229,7 @@ body {
 .input-field {
   min-width: 100%;
   /* min-width: 280px; */
-  font-size: clamp(16px, 1vh, 100px);
+  font-size: clamp(18px, 1vh, 100px);
   margin: 0px;
   padding: 4px 10px 4px 5px;
   border: none;
@@ -222,8 +240,8 @@ body {
 
 .signin-input-field {
   min-width: 100%;
-  /* min-width: 280px; */
-  font-size: clamp(14px, 1vh, 100px);
+  min-width: 100%;
+  font-size: clamp(18px, 1vh, 100px);
   margin: 0px;
   padding: 3px 10px 3px 5px;
   border: none;
@@ -259,8 +277,9 @@ body {
 }
 
 #signin-button {
+  font-size: clamp(16px, 1vh, 100px);
   min-width: 100%;
-  padding: 12px 20px;
+  padding: 15px 20px;
   background: #4e01b3;
   border-radius: 15px;
 }
@@ -283,7 +302,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 4px;
+  gap: 50px;
   padding-bottom: 30px;
 }
 
