@@ -86,8 +86,6 @@ previewButton.addEventListener("click", () => {
       signupForm.classList.add("hidden-view");
       detailBox.style.display = "none";
       bgDrop.classList.remove("hide-bg");
-      signinTitle.style.display = "none";
-      signupTitle.style.display = "none";
 
       detailBox.style.opacity = "0";
       detailBox.style.transform = "translateY(-20)";
