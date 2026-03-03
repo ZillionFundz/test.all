@@ -625,16 +625,37 @@ body {
   box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.5);
 }
 
+/* Emerald Mint */
 .level1 {
-  background: #e6b650;
+  /* background: #e6b650; */
+  background: #0f3d3e;
+  border: 1px solid #00c896;
 }
 
+.level1:hover {
+  background: #145c5e;
+}
+
+/* Neon Purple */
 .level2 {
-  background: #f700ff;
+  /* background: #f700ff; */
+  background: #1e2a78;
+  border: 1px solid #2962ff;
 }
 
+.level2:hover {
+  background: #2a3bb5;
+}
+
+/* Royal Blue */
 .level3 {
-  background: #7950f3;
+  /* background: #7950f3; */
+  background: #2b1e4a;
+  border: 1px solid #9b5de5;
+}
+
+.level3:hover {
+  background: #3a2768;
 }
 
 .level-indicator:hover {
@@ -729,7 +750,8 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #29fa56;
+  /* background: #29fa56; */
+  background: #00ff88;
   transform: translate(-50%, -50%);
   top: 8px;
   left: 8px;
@@ -750,15 +772,15 @@ body {
   box-shadow: 0 0 2px 1px rgba(250, 41, 41, 0.7);
 }
 
-.active-status {
-  border: 1px solid #29fa56;
-  box-shadow: 0 0 2px 1px rgba(41, 250, 86, 0.7);
-}
+/* .active-status {
+  border: 1px solid #00c896;
+  box-shadow: 0 0 3px 1px rgba(41, 250, 86, 0.25);
+} */
 
-.inactive-status {
+/* .inactive-status {
   border: 1px solid #fa2929;
-  box-shadow: 0 0 2px 1px rgba(250, 41, 41, 0.7);
-}
+  box-shadow: 0 0 3px 1px rgba(250, 41, 41, 0.25);
+} */
 
 @media screen and (max-width: 780px) {
   .table {
