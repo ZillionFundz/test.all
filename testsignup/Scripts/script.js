@@ -18,7 +18,42 @@ const detailGroup = document.getElementById("detail-group");
 const detailBox = document.getElementById("detail-box");
 const previewUsername = document.getElementById("preview-username");
 const previewEmail = document.getElementById("preview-email");
+const profilePix = document.querySelectorAll(".profile-pix");
+const profileImage = document.getElementById("profile-image");
+const overlay = document.getElementById("overlay");
+const exitProfileButton = document.getElementById("exit-profile-button");
+const profileViewedBox = document.getElementById("profile-viewed-box");
+const profileViewedPix = document.getElementById("profile-viewed-pix");
 console.log(signupBtn);
+
+profilePix.forEach((profilePicture) => {
+  profilePicture.addEventListener("click", () => {
+    profileViewedPix.src = profilePicture.querySelector("img").src;
+    overlay.style.display = "block";
+    profileViewedBox.classList.remove("close-profile-image");
+
+    setTimeout(() => {
+      profileViewedBox.classList.add("view-profile-image");
+    }, 250);
+  });
+});
+
+overlay.addEventListener("click", () => {
+  overlay.style.display = "none";
+  // setTimeout(() => {
+  profileViewedBox.classList.remove("view-profile-image");
+  profileViewedBox.classList.add("close-profile-image");
+  // }, 100);
+});
+
+exitProfileButton.addEventListener("click", () => {
+  overlay.style.display = "none";
+  profileViewedPix.src = "";
+  setTimeout(() => {
+    profileViewedBox.classList.remove("view-profile-image");
+    profileViewedBox.classList.add("close-profile-image");
+  }, 200);
+});
 
 signupForm.classList.add("hidden-view");
 signinForm.classList.add("hidden-view");
@@ -88,13 +123,13 @@ previewButton.addEventListener("click", () => {
       bgDrop.classList.remove("hide-bg");
 
       detailBox.style.opacity = "0";
-      detailBox.style.transform = "translateY(-20)";
+      detailBox.style.transform = "translateY(20px)";
 
       detailGroup.style.background =
         "linear-gradient(-160deg, #cf18fd, #1100ff, #29216e, #000)";
 
       isAnimating = false;
-    }, 5000);
+    }, 1000);
   }
 });
 
