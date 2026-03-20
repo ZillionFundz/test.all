@@ -57,9 +57,9 @@ exitProfileButton.addEventListener("click", () => {
   }, 200);
 });
 
-signinInputLabel.addEventListener("click", () => {
+signinWrapper.addEventListener("click", () => {
   signinWrapper.classList.add("input-active");
-  signinInputLabel.style.fontSize = "clamp(10px, 1vw, 100px)";
+  signinInputLabel.style.fontSize = "clamp(12px, 1vw, 100px)";
   signinInputLabel.style.color = "#1100ff";
 });
 
