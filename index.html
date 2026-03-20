@@ -1,28 +1,429 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onet Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Styles/style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pop Up Test</title>
-    <link rel="stylesheet" href="Styles/style.css">
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <button id="exit-btn" class="exit-btn">Exit</button>
-        <div class="overlay" id="overlay"></div>
-        <div class="popup" id="popup">
-            <div class="handle-bar"></div>
-            <h3>Do you realy want to exit ONET page?</h3>
-            <div class="y-n-box">
-                <button id="yes-btn" class="yes-no">Yes</button>
-                <button id="no-btn" class="yes-no">No</button>
+      <!--SIGNUP FORM STARTS HERE: 👇-->
+      <form id="signup-form" class="sign-form" action="">
+        <div class="group-box">
+          <div class="form-box">
+            <h3 id="signup-title" class="sign-up-in-title">SignUp</h3>
+            <img src="Images/onetlogo.png" alt="" />
+            <div class="wrapper">
+              <label class="input-label" for="signup-username"
+                >Enter your Username:</label
+              >
+              <input id="signup-username" class="input-field" type="text" />
+            </div>
+            <div class="wrapper">
+              <label class="input-label" for="signup-email"
+                >Enter your Email:</label
+              >
+              <input id="signup-email" class="input-field" type="email" />
+            </div>
+            <div class="wrapper">
+              <label class="input-label" for="signup-password"
+                >Enter your Password:</label
+              >
+              <div class="password-box">
+                <input
+                  id="signup-password"
+                  class="input-field"
+                  type="password"
+                />
+                <input id="signup-checkbox" class="checked" type="checkbox" />
+              </div>
+            </div>
+            <div class="preview-submit">
+              <button id="preview-button" type="button" class="action-button">
+                Preview
+              </button>
+              <button id="signup-button" type="submit" class="action-button">
+                SignUp
+              </button>
+            </div>
+            <span class="already-have-account"
+              >Already have Onet account?.....
+              <button id="switchto-signin-button" class="switchto-sign-button">
+                SignIn
+              </button></span
+            >
+          </div>
+
+          <div id="detail-group" class="detail-group">
+            <div id="detail-box" class="detail-box">
+              <div class="user-detail">
+                <h3>Review your Details:</h3>
+                <div class="user-row">
+                  <div>Username:</div>
+                  <div id="preview-username" class="unitdetail"></div>
+                </div>
+                <div class="user-row">
+                  <div>Email:</div>
+                  <div id="preview-email" class="unitdetail"></div>
+                </div>
+                <!-- <div class="user-row">
+                  <div>Password:</div>
+                  <div id="preview-password" class="unitdetail"></div>
+                </div> -->
+              </div>
+              <div class="user-footer">Copyright: ONET &copy 2018 | 2026.</div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!--SIGNIN FORM STARTS HERE: 👇-->
+      <form id="signin-form" class="sign-form" action="">
+        <div class="group-box">
+          <div class="form-box signin-form-box">
+            <button id="exit-button" type="button" class="exit-button">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <img src="Images/onetlogo.png" alt="" />
+            <div class="signin-title-and-forgot-box">
+              <div class="sigin-header-box">
+                <h3 id="signin-title" class="sign-up-in-title">SignIn</h3>
+                <span class="signin-header"
+                  >Authorise with Onet ID & passcode</span
+                >
+              </div>
+              <div class="forgot-box">
+                <div id="signin-wrapper" class="signin-wrapper">
+                  <label
+                    id="signin-input-label"
+                    class="input-label"
+                    for="username"
+                    >ONET | ID:</label
+                  >
+                  <input id="username" class="signin-input-field" type="text" />
+                </div>
+                <div class="forgot-id">Forgot Onet ID...?</div>
+              </div>
+            </div>
+            <!-- <div class="wrapper">
+              <label class="input-label" for="email">Enter your Email:</label>
+              <input id="email" class="input-field" type="email" />
+            </div> -->
+            <!-- <div class="signin-wrapper">
+              <label class="input-label" for="password"
+                >Enter your Password:</label
+              >
+              <div class="password-box">
+                <input
+                  id="password"
+                  class="signin-input-field"
+                  type="password"
+                />
+                <input id="checked" class="checked" type="checkbox" />
+              </div>
+            </div> -->
+
+            <div class="dont-have-option-box">
+              <button id="signin-button" type="submit" class="action-button">
+                SignIn
+              </button>
+
+              <span class="already-have-account"
+                >Don't have Onet account?.....
+                <button
+                  id="switchto-signup-button"
+                  class="switchto-sign-button"
+                >
+                  SignUp</button
+                >👈here!</span
+              >
+            </div>
+          </div>
+          <div class="user-footer">Copyright &copy ONET 2018 | 2026.</div>
+        </div>
+      </form>
+
+      <!-- AVAILABLE COURSES:... 👇 -->
+      <div class="grey-bg">
+        <div id="bg-drop" class="bg-drop">
+          <div class="profile-box">
+            <div class="bio-banner"></div>
+            <div class="bio-details">
+              <div class="profile-pix">
+                <img id="profile-image" src="Images/onetlogo.png" alt="" />
+              </div>
+
+              <div class="cta-box">
+                <button id="signup-btn" type="button" class="cta-btn">
+                  SignUp
+                </button>
+                <button id="menu-btn" type="button" class="cta-btn">
+                  Menu
+                </button>
+              </div>
+              Welcome to the Open Network Technology, ONET. An ecosystem for
+              Web3 solutions, decentralised finances (DeFi), blockchain
+              technologies, to leverage entertainments and empower humanity,
+              support skill learning, and promote value growth.
+            </div>
+          </div>
+
+          <div class="table">
+            <div class="table-title">
+              <div class="title-wrapper">
+                <div id="level1" class="level-badge">👨‍💻</div>
+                <div class="th">Level 1</div>
+              </div>
+              <div class="title-wrapper">
+                <div id="level2" class="level-badge">💥</div>
+                <div class="th">Level 2</div>
+              </div>
+              <div class="title-wrapper">
+                <div id="level3" class="level-badge">🚀</div>
+                <div class="th">Level 3</div>
+              </div>
             </div>
 
+            <div class="rows-box">
+              <div class="tr">
+                <div class="active-indicator"></div>
+                <div class="course-title">Website Development</div>
+                <div class="pricing-box active-status level2">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$200.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q2 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">31st July</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="active-indicator"></div>
+                <div class="course-title">Graphics Design</div>
+                <div class="pricing-box active-status level1">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$80.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q1 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">31st March</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="inactive-indicator"></div>
+                <div class="course-title">Blockchain Development</div>
+                <div class="pricing-box inactive-status level3">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$250.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q2 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">31st July</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="inactive-indicator"></div>
+                <div class="course-title">Forex Trading</div>
+                <div class="pricing-box inactive-status level2">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$170.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q2 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">31st July</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="inactive-indicator"></div>
+                <div class="course-title">UI/UX Design</div>
+                <div class="pricing-box inactive-status level1">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$150.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q2 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">31th July</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="active-indicator"></div>
+                <div class="course-title">Crypto Trading</div>
+                <div class="pricing-box active-status level3">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$200.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q4 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">30th Nov.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="inactive-indicator"></div>
+                <div class="course-title">Public Speaking</div>
+                <div class="pricing-box inactive-status level3">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$100.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q4 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">30th Nov.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="inactive-indicator"></div>
+                <div class="course-title">Video Editing</div>
+                <div class="pricing-box inactive-status level2">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$150.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q1 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">31th July</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="inactive-indicator"></div>
+                <div class="course-title">Digital Marketting</div>
+                <div class="pricing-box inactive-status level1">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$100.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q1 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">31st March</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="active-indicator"></div>
+                <div class="course-title">VB. Programming</div>
+                <div class="pricing-box active-status level3">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$175.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q3 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">30th July</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="inactive-indicator"></div>
+                <div class="course-title">Solidity Development</div>
+                <div class="pricing-box inactive-status level2">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$155.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q4 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">30th Nov.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tr">
+                <div class="active-indicator"></div>
+                <div class="course-title">Database Management</div>
+                <div class="pricing-box active-status level1">
+                  <div class="product-price">
+                    <div class="course-detail">Fee:</div>
+                    <span class="course-value">$160.000</span>
+                  </div>
+                  <div class="session">
+                    <div class="course-detail">Session:</div>
+                    <div class="course-value">Q2 (3M)</div>
+                  </div>
+                  <div class="time-stamp">
+                    <div class="course-detail">Ends:</div>
+                    <div class="course-value">31th July</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <script src="Scripts/script.js"></script>
-</body>
+      </div>
 
+      <!-- PROFILE PREVIEW CONTAINER -->
+      <div id="overlay" class="overlay"></div>
+      <div id="profile-viewed-box" class="profile-viewed-box">
+        <div class="close-profile">
+          <button id="exit-profile-button" class="exit-profile-button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <img id="profile-viewed-pix" class="profile-viewed-pix" src="" alt="" />
+      </div>
+    </div>
+
+    <script src="Scripts/script.js"></script>
+  </body>
 </html>
