@@ -88,7 +88,6 @@ checkBox.addEventListener("change", () => {
   }
 });
 
-
 let isPreview = true;
 let isAnimating = false;
 
