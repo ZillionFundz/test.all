@@ -1,4 +1,6 @@
 const signupBtn = document.getElementById("signup-btn");
+const menuBtn = document.getElementById("menu-btn");
+const menuBox = document.getElementById("menu-box");
 const previewButton = document.getElementById("preview-button");
 const signupButton = document.getElementById("signup-button");
 const checkBox = document.getElementById("signup-checkbox");
@@ -76,6 +78,19 @@ signupBtn.addEventListener("click", () => {
     signupForm.classList.remove("hidden-view");
     signupForm.classList.add("active-view");
   }, 1000); // match CSS transition time
+});
+
+let isOpen = false;
+menuBtn.addEventListener("click", () => {
+  if (isOpen) {
+    setTimeout(() => {
+      menuBox.style.display = "none";
+      isOpen = false;
+    }, 200);
+  } else {
+    menuBox.style.display = "block";
+    isOpen = true;
+  }
 });
 
 checkBox.addEventListener("change", () => {
