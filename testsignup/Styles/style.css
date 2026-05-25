@@ -700,13 +700,15 @@ body {
 .menu-option {
   margin: 0px;
   padding: 5px;
+  border: none;
+  width: 100%;
   text-align: right;
 }
 
 .menu-option:hover {
   cursor: pointer;
   color: #000;
-  background: #ececec;
+  background: #dddcdc;
 }
 
 .menu-option:active {
