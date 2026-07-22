@@ -162,8 +162,7 @@ body {
   position: relative;
   margin: 0px;
   padding: 20px 20px;
-  /* background: linear-gradient(180deg, #e6e7e9, #ebebeb); */
-  background: #ce1717;
+  background: linear-gradient(180deg, #dbdee4, #eeeded) !important;
 }
 
 .form-box img {
