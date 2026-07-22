@@ -106,12 +106,16 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin: 0px;
-  /* padding: 10px; */
+  border-radius: 10px;
+  margin: 030px 0px 0px 0px;
+  padding: 10px;
   width: 100%;
-  height: 35%;
+  /* height: 35%; */
   /* gap: 5px; */
-  /* background: red; */
+  /* background: linear-gradient(180deg, #e6e7e9, #ebebeb); */
+
+  background: #ffffff;
+  position: relative;
 }
 
 .signin-header {
@@ -150,7 +154,6 @@ body {
   padding: 10px 15px;
   gap: 15px;
   background: #fff;
-  position: relative;
   /* box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.3); */
 }
 
@@ -159,6 +162,8 @@ body {
   position: relative;
   margin: 0px;
   padding: 20px 20px;
+  /* background: linear-gradient(180deg, #e6e7e9, #ebebeb); */
+  background: #ce1717;
 }
 
 .form-box img {
@@ -166,7 +171,9 @@ body {
   /* height: 200px; */
   border-radius: 10px;
   margin: 0px;
-  padding: 30px 0px 0px;
+  padding: 0px 0px 0px;
+  position: absolute;
+  transform: translateY(-70%);
 }
 
 .exit-button {
@@ -196,6 +203,8 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 5px;
+  margin: 30px 0px 0px 0px;
+  padding: 0px;
 }
 
 .wrapper {
@@ -320,7 +329,8 @@ body {
 
 #signin-button {
   font-size: clamp(18px, 2vh, 100px);
-  min-width: 100%;
+  width: 100%;
+  max-width: 450px;
   padding: 15px 20px;
   background: #4e01b3;
   border-radius: 15px;
@@ -630,10 +640,11 @@ body {
   width: 75px;
   height: 75px;
   /* border: 2px solid #00ff6a; */
-  border: 4px solid #1b1b1b;
+  border: 2px solid #1b1b1b;
   border-radius: 50%;
   page-break-inside: 0px;
-  padding: 0.5px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .bio-details {
@@ -888,7 +899,7 @@ body {
   border-top: none;
   border-radius: 0px 0px 10px 10px;
   /* height: auto; */
-  max-height: 473px;
+  max-height: 420px;
   overflow-y: auto;
 }
 
@@ -946,6 +957,10 @@ body {
 } */
 
 @media screen and (max-width: 780px) {
+  .rows-box {
+    max-height: 473px;
+  }
+
   .table {
     margin: 0px;
     padding: 0px;
@@ -980,6 +995,10 @@ body {
 }
 
 @media screen and (max-width: 620px) {
+  .rows-box {
+    max-height: 465px;
+  }
+
   .table {
     margin: 0px;
     padding: 0px;
@@ -1064,6 +1083,10 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+  .rows-box {
+    max-height: 475px;
+  }
+
   .group-box {
     display: flex;
     justify-content: center;
@@ -1074,6 +1097,10 @@ body {
 }
 
 @media screen and (max-width: 350px) {
+  .rows-box {
+    max-height: 425px;
+  }
+
   .table {
     margin: 0px;
     padding: 0px;
