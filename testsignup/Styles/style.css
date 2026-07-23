@@ -112,7 +112,7 @@ body {
   width: 100%;
   /* height: 35%; */
   /* gap: 5px; */
-  
+
   /* background: linear-gradient(180deg, #e6e7e9, #ebebeb); */
 
   background: #ffffff;
@@ -163,7 +163,7 @@ body {
   position: relative;
   margin: 0px;
   padding: 20px 20px;
-  background: linear-gradient(120deg, #bbbef8, #ffffff) !important;
+  background: linear-gradient(115deg, #c0c3f7, #ffffff) !important;
 }
 
 .guide-box {
@@ -1090,7 +1090,7 @@ body {
 
 @media screen and (max-width: 450px) {
   .rows-box {
-    max-height: 475px;
+    max-height: 450px;
   }
 
   .group-box {
@@ -1104,7 +1104,7 @@ body {
 
 @media screen and (max-width: 350px) {
   .rows-box {
-    max-height: 425px;
+    max-height: 420px;
   }
 
   .table {
